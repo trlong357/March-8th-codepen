@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Ribeye&family=Rubik+Wet+Paint&family=Rubik:wght@900&display=swap");
+
+$background: #efdfdf;
+$pattern: #b8d1d7;
+$primary: #ea7379;
+$secondary: #37566b;
+$author: #00757d;
+$body: #a1b5ad;
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $body;
+}
+
+main {
+  transform: rotate(-3deg);
+}
+
+.card {
+  background-color: $background;
+  width: 90vmin;
+  height: 60vmin;
+  overflow: hidden;
+  position: relative;
+  border-bottom: 0.3vmin solid rgba(68, 35, 35, 0.15);
+  box-shadow: rgba(34, 46, 44, 0.1) 0 1px 1px,
+    rgba(34, 46, 44, 0.1) 0 3vmin 3vmin, rgba(34, 46, 44, 0.1) 0 6vmin 6vmin;
+}
+
+.pattern {
+  background-color: $pattern;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 1;
+
+  &_tl {
+    $pattern-tl-size: 12vmin;
+
+    width: $pattern-tl-size;
+    height: $pattern-tl-size;
+    top: $pattern-tl-size / -2;
+    left: $pattern-tl-size / -2;
+  }
+
+  &_bc {
+    $pattern-bc-size: 28vmin;
+
+    width: $pattern-bc-size;
+    height: $pattern-bc-size;
+    bottom: 0 - $pattern-bc-size / 1.25;
+    left: 100vmin - $pattern-bc-size * 2;
+  }
+}
+
+.circle {
+  background-color: $primary;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 2;
+  width: 60vmin;
+  height: 60vmin;
+  top: -10vmin;
+  right: -1vmin;
+}
+
+.eight {
+  width: 32vmin;
+  position: absolute;
+  top: 4vmin;
+  right: 13vmin;
+  z-index: 3;
+  transform: rotate(9deg);
+}
+
+.cat {
+  width: 40vmin;
+  position: absolute;
+  top: 12vmin;
+  left: -2vmin;
+  z-index: 3;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+  font-weight: normal;
+  position: absolute;
+  z-index: 4;
+}
+
+h1 {
+  font-family: "Ribeye", cursive;
+  color: $secondary;
+  font-size: 3.25vmin;
+  text-transform: lowercase;
+  top: 3.75vmin;
+  left: 6.75vmin;
+  transform: rotate(-3.2deg);
+}
+
+h2 {
+  font-family: "Rubik", sans-serif;
+  font-weight: 900;
+  color: $primary;
+  font-size: 10vmin;
+  text-transform: uppercase;
+  bottom: 4.5vmin;
+  left: 4.65vmin;
+  transform: rotate(-3deg);
+}
+
+p {
+  font-family: "Rubik Wet Paint", cursive;
+  color: $author;
+  font-size: 2vmin;
+  text-transform: lowercase;
+  bottom: 1.25vmin;
+  right: 1.25vmin;
+}
